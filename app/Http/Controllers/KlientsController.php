@@ -7,7 +7,6 @@ use App\Klient;
 
 class KlientsController extends Controller
 {
-    //
     public function getAllKlients() {
         $klients = Klient::orderBy('id', 'DESC')->get();
         return view('klients', ['klients' => $klients]);
@@ -31,7 +30,7 @@ class KlientsController extends Controller
             $klient_obj->name = $request['name'];
               $klient_obj->surname = $request['surname'];
              $klient_obj->age = $request['age'];
-            $klient_obj->save(); //$phone_obj->insert($model, $year, $price);
+            $klient_obj->save(); //$phone_obj->($model, $year, $price);
              return redirect()->route('klients');
          } 
       } 

@@ -38,7 +38,6 @@ class PhoneController extends Controller
       } 
     public function editPhone(Phone $phone, Request $request) {
        // $phone_obj = new Phone();
-      // $phone = $phone->find(4);
       $phone = $phone->find($request->id);
                 return view('phone_edit', ['phone'=>$phone]);
     }
